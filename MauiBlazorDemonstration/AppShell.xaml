@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Shell x:Class="MauiBlazorDemonstration.AppShell" xmlns="http://schemas.microsoft.com/dotnet/2021/maui" 
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:views="clr-namespace:MauiBlazorDemonstration.Views"
+       xmlns:local="clr-namespace:MauiBlazorDemonstration" BackgroundColor="{DynamicResource ShellBackgroundColor}"
+       FlyoutBackgroundColor="{DynamicResource FlyoutColor}">
+
+    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
+        <ShellContent Title="Home" Icon="home.png" ContentTemplate="{DataTemplate views:HomePage}" Route="HomePage" x:Name="HomeItem"/>
+        <ShellContent Title="Setup" Icon="setup.png" ContentTemplate="{DataTemplate views:SetupPage}" Route="SetupPage" x:Name="SetupItem"/>
+        <ShellContent Title="XAML" Icon="xaml.png" ContentTemplate="{DataTemplate views:DogsDisplayNativePage}" Route="DogsDisplayNativePage" x:Name="DogsNativeItem"/>
+        <ShellContent Title="Blazor" Icon="blazor.png" ContentTemplate="{DataTemplate views:DogsDisplayBlazorPage}" Route="DogsDisplayBlazorPage" x:Name="DogsBlazorItem"/>
+    </FlyoutItem>
+
+</Shell>

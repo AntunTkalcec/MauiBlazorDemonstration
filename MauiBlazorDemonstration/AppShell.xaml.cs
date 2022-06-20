@@ -1,20 +1,23 @@
-﻿using MauiBlazorDemonstration.Views;
+using MauiBlazorDemonstration.Views;
 
 namespace MauiBlazorDemonstration;
 
-public partial class App : Application
+public partial class AppShell : Shell
 {
-	public App()
+	public AppShell()
 	{
 		InitializeComponent();
 
+        Routing.RegisterRoute(nameof(HomePage), typeof(HomePage));
+        Routing.RegisterRoute(nameof(SetupPage), typeof(SetupPage));
+
         if (Task.Run(async () => await ApplicationIsSetUp()) == Task.FromResult(true))
         {
-            MainPage = new AppShell();
+            CurrentItem = HomeItem;
         }
         else
         {
-            MainPage = new SetupPage();
+            CurrentItem = SetupItem;
         }
     }
 

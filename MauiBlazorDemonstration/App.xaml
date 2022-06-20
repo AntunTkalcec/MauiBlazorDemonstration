@@ -6,8 +6,23 @@
     <Application.Resources>
         <ResourceDictionary>
 
-            <Color x:Key="PageBackgroundColor">#512bdf</Color>
-            <Color x:Key="PrimaryTextColor">White</Color>
+            <Color x:Key="PageBackgroundColor">White</Color>
+            <Color x:Key="PrimaryTextColor">Black</Color>
+            <Color x:Key="ShellBackgroundColor">#7dd0e9</Color>
+            <Color x:Key="FlyoutColor">#2f9ebf</Color>
+            <Color x:Key="PrimaryColor">#7DD0E9</Color>
+            <Color x:Key="SecondaryColor">#DDDD22</Color>
+            <Color x:Key="TertiaryColor">#DAE7BE</Color>
+
+            <LinearGradientBrush StartPoint="0, 0" EndPoint="1, 1" x:Key="Gradient1">
+                <GradientStop Color="{StaticResource SecondaryColor}" Offset="0.0"/>
+                <GradientStop Color="{StaticResource PrimaryColor}" Offset="1.0"/>
+            </LinearGradientBrush>
+
+            <LinearGradientBrush StartPoint="0, 0" EndPoint="1, 1" x:Key="Gradient2">
+                <GradientStop Color="{StaticResource PrimaryColor}" Offset="0.0"/>
+                <GradientStop Color="{StaticResource SecondaryColor}" Offset="1.0"/>
+            </LinearGradientBrush>
 
             <Style TargetType="Label">
                 <Setter Property="TextColor" Value="{DynamicResource PrimaryTextColor}" />
@@ -19,6 +34,10 @@
                 <Setter Property="FontFamily" Value="OpenSansRegular" />
                 <Setter Property="BackgroundColor" Value="#2b0b98" />
                 <Setter Property="Padding" Value="14,10" />
+            </Style>
+
+            <Style TargetType="Page" ApplyToDerivedTypes="True">
+                <Setter Property="BackgroundColor" Value="{DynamicResource PageBackgroundColor}"/>
             </Style>
 
         </ResourceDictionary>
