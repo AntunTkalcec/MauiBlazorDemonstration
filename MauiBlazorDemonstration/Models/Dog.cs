@@ -8,29 +8,29 @@ namespace MauiBlazorDemonstration.Models
 {
     public class Dog
     {
-        public string ImageLink { get; set; }
-        public int GoodWithChildren { get; set; }
-        public int GoodWithOtherDogs { get; set; }
-        public int Shedding { get; set; }
-        public int Grooming { get; set; }
-        public int Drooling { get; set; }
-        public int CoatLength { get; set; }
-        public int GoodWithStrangers { get; set; }
-        public int Playfulness { get; set; }
-        public int Protectiveness { get; set; }
-        public int Trainability { get; set; }
-        public int Energy { get; set; }
-        public int Barking { get; set; }
-        public int MinLifeExpectancy { get; set; }
-        public int MaxLifeExpectancy { get; set; }
-        public int MaxHeightMale { get; set; }
-        public int MaxHeightFemale { get; set; }
-        public int MaxWeightMale { get; set; }
-        public int MaxWeightFemale { get; set; }
-        public int MinHeightMale { get; set; }
-        public int MinHeightFemale { get; set; }
-        public int MinWeightMale { get; set; }
-        public int MinWeightFemale { get; set; }
-        public string Name { get; set; }
+        public string image_link { get; set; }
+        public string good_with_children { get; set; }
+        public string good_with_other_dogs { get; set; }
+        public string shedding { get; set; }
+        public string grooming { get; set; }
+        public string drooling { get; set; }
+        public string coat_length { get; set; }
+        public string good_with_strangers { get; set; }
+        public string playfulness { get; set; }
+        public string protectiveness { get; set; }
+        public string trainability { get; set; }
+        public string energy { get; set; }
+        public string barking { get; set; }
+        public string min_life_expectancy { get; set; }
+        public string max_life_expectancy { get; set; }
+        public string max_height_male { get; set; }
+        public string max_height_female { get; set; }
+        public string max_weight_male { get; set; }
+        public string max_weight_female { get; set; }
+        public string min_height_male { get; set; }
+        public string min_height_female { get; set; }
+        public string min_weight_male { get; set; }
+        public string min_weight_female { get; set; }
+        public string name { get; set; }
     }
 }

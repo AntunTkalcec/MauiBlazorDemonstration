@@ -2,11 +2,34 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiBlazorDemonstration.Views.HomePage"
-             Title="Home">
+             xmlns:viewmodels="clr-namespace:MauiBlazorDemonstration.ViewModels"
+             Title="{Binding Title}"
+             xmlns:models="clr-namespace:MauiBlazorDemonstration.Models"
+             x:DataType="viewmodels:HomePageViewModel">
     <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+        <Label Text="Select a dog you want to know about!" FontSize="30" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand" VerticalTextAlignment="Center"
+               HorizontalTextAlignment="Center"/>
+        <Picker ItemsSource="{Binding DogBreeds}" BackgroundColor="{DynamicResource PrimaryColor}" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"
+                WidthRequest="225" HeightRequest="75" Margin="0, 100, 0, 0" SelectedIndexChanged="Picker_SelectedIndexChanged" Title="Pick a breed" 
+                TitleColor="White" x:Name="picker">
+            <Picker.Shadow>
+                <Shadow Brush="Black" Offset="5,5" Radius="20" Opacity="0.6"/>
+            </Picker.Shadow>
+        </Picker>
+
+        <StackLayout x:Name="ConfirmBtn" Opacity="0">
+            <Border Stroke="{DynamicResource Gradient2}" StrokeThickness="6" StrokeShape="Ellipse" Background="{DynamicResource TertiaryColor}" Padding="0" WidthRequest="130" 
+                HeightRequest="130" Margin="0, 50, 0, 0">
+                <Border.Shadow>
+                    <Shadow Brush="Black" Offset="5,5" Radius="40" Opacity="0.6"/>
+                </Border.Shadow>
+                <Button Text="Confirm" BackgroundColor="Transparent" FontSize="20" Command="{Binding ConfirmCommand}" 
+                    CommandParameter="{Binding SelectedItem, Source={x:Reference picker}}"/>
+            </Border>
+
+            <ActivityIndicator HorizontalOptions="FillAndExpand" IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}" VerticalOptions="CenterAndExpand" Color="Black"
+                           Scale="1.5" Margin="0, 50, 0, 0"/>
+        </StackLayout>
+
     </VerticalStackLayout>
 </ContentPage>

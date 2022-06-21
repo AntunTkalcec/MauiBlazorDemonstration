@@ -1,4 +1,5 @@
 ﻿using MauiBlazorDemonstration.Models;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,20 +12,30 @@ namespace MauiBlazorDemonstration.Data
     public class DogService
     {
         private readonly HttpClient httpClient;
-        public List<Dog> Dogs;
+        public List<Dog> Dog;
+        private string apiKey;
         public DogService()
         {
             httpClient = new();
+            LoadApiAsset();
         }
-        public async Task<List<Dog>> GetDogs(string breedName)
+
+        private async Task LoadApiAsset()
         {
-            httpClient.DefaultRequestHeaders.Add("X-Api-Key", "eeIqZ2GtmK491PTqCc9dug==24Ei4B1qwZsbsu59");
+            using var stream = await FileSystem.OpenAppPackageFileAsync("config.txt");
+            using var reader = new StreamReader(stream);
+            apiKey = reader.ReadToEnd();
+            httpClient.DefaultRequestHeaders.Add("X-Api-Key", $"{apiKey}");
+        }
+        public async Task<List<Dog>> GetDogAsync(string breedName)
+        {           
             var response = await httpClient.GetAsync($"https://api.api-ninjas.com/v1/dogs?name={breedName}");
             if (response.IsSuccessStatusCode)
             {
-                Dogs = await response.Content.ReadFromJsonAsync<List<Dog>>();
+                var dog = await response.Content.ReadAsStringAsync();
+                Dog = JsonConvert.DeserializeObject<List<Dog>>(dog);
             }
-            return Dogs;
+            return Dog;
         }
     }
 }

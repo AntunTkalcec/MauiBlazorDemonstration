@@ -50,11 +50,16 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Data\config.txt" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <Folder Include="Services\" />
 	</ItemGroup>
 
 	<ItemGroup>
 	  <PackageReference Include="CommunityToolkit.Mvvm" Version="8.0.0-preview4" />
+	  <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -70,6 +75,12 @@
 	    <Generator>ResXFileCodeGenerator</Generator>
 	    <LastGenOutput>AppRes.Designer.cs</LastGenOutput>
 	  </EmbeddedResource>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiAsset Update="Resources\Raw\config.txt">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </MauiAsset>
 	</ItemGroup>
 
 	<ItemGroup>
@@ -89,5 +100,7 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
+
+	<ProjectExtensions><VisualStudio><UserProperties XamarinHotReloadDebuggerTimeoutExceptionMauiBlazorDemonstrationHideInfoBar="True" /></VisualStudio></ProjectExtensions>
 
 </Project>

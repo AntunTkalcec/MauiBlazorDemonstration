@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiBlazorDemonstration.Views.SetupPage"
-             xmlns:viewmodels="clr-namespace:MauiBlazorDemonstration.ViewModels" Title="{Binding Title}">
+             xmlns:viewmodels="clr-namespace:MauiBlazorDemonstration.ViewModels" Title="{Binding Title}"
+             Shell.PresentationMode="ModalAnimated">
     <ContentPage.BindingContext>
         <viewmodels:SetupPageViewModel/>
     </ContentPage.BindingContext>
@@ -11,43 +12,30 @@
         <HorizontalStackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" HeightRequest="350">
             <Border Stroke="{DynamicResource Gradient1}" StrokeThickness="6" StrokeShape="RoundRectangle 40, 0, 0, 40" 
                     Background="{DynamicResource TertiaryColor}" Padding="0" HorizontalOptions="StartAndExpand" 
-                    VerticalOptions="Center" x:Name="EnglishBtn" HeightRequest="100" WidthRequest="175">
+                    VerticalOptions="Center" HeightRequest="100" WidthRequest="140">
                 <Border.Shadow>
                     <Shadow Brush="Black" Offset="10,10" Radius="20" Opacity="0.5"/>
                 </Border.Shadow>
-                <Border.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="EnglishBtnTapped"/>
-                </Border.GestureRecognizers>
-                <Frame BackgroundColor="Transparent">
-                    <Label Text="English" FontSize="25" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" x:Name="EnglishLabel"/>
-                </Frame>
+                <Button Text="English" BackgroundColor="Transparent" FontSize="20" x:Name="EnglishBtn" Clicked="EnglishBtnTapped"/>
             </Border>
                
             <BoxView WidthRequest="2" Color="Black" Margin="30, 100, 30, 100"/>
 
             <Border Stroke="{DynamicResource Gradient1}" StrokeThickness="6" StrokeShape="RoundRectangle 0, 40, 40, 0" 
                     Background="{DynamicResource TertiaryColor}" Padding="0" HorizontalOptions="EndAndExpand" 
-                    VerticalOptions="Center" x:Name="CroatianBtn" HeightRequest="100" WidthRequest="175">
+                    VerticalOptions="Center" HeightRequest="100" WidthRequest="140">
                 <Border.Shadow>
                     <Shadow Brush="Black" Offset="10,10" Radius="20" Opacity="0.5"/>
                 </Border.Shadow>
-                <Border.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="CroatianBtnTapped"/>
-                </Border.GestureRecognizers>
-                <Frame BackgroundColor="Transparent">
-                    <Label Text="Croatian" FontSize="25" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" x:Name="CroatianLabel"/>
-                </Frame>
+                <Button Text="Croatian" BackgroundColor="Transparent" FontSize="20" x:Name="CroatianBtn" Clicked="CroatianBtnTapped"/>
             </Border>
         </HorizontalStackLayout>
         <Border Stroke="{DynamicResource Gradient2}" StrokeThickness="6" StrokeShape="Ellipse" Background="{DynamicResource TertiaryColor}" Padding="0" WidthRequest="130" 
-                HeightRequest="130" x:Name="ConfirmBtn">
-            <Border.GestureRecognizers>
-                <TapGestureRecognizer Tapped="ConfirmBtnTapped"/>
-            </Border.GestureRecognizers>
+                HeightRequest="130">
             <Border.Shadow>
                 <Shadow Brush="Black" Offset="10,10" Radius="40" Opacity="0.6"/>
             </Border.Shadow>
-            <Button Text="Confirm" BackgroundColor="Transparent" FontSize="20" IsEnabled="{Binding ConfirmEnabled}"/>
+            <Button Text="Confirm" BackgroundColor="Transparent" FontSize="20" IsEnabled="{Binding ConfirmEnabled}" Clicked="ConfirmBtnTapped" x:Name="ConfirmBtn"/>
         </Border>
     </VerticalStackLayout>
 </ContentPage>

@@ -2,6 +2,7 @@
 using MauiBlazorDemonstration.Data;
 using MauiBlazorDemonstration.ViewModels;
 using MauiBlazorDemonstration.Views;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace MauiBlazorDemonstration;
 
@@ -33,6 +34,9 @@ public static class MauiProgram
 		builder.Services.AddTransient<SetupPageViewModel>();
 		builder.Services.AddTransient<SetupPage>();
 		builder.Services.AddTransient<HomePage>();
+		builder.Services.AddTransient<DogsDisplayNativePage>();
+		builder.Services.AddTransient<DogsNativeViewModel>();
+		builder.Services.AddTransient<HomePageViewModel>();
 
 		return builder.Build();
 	}

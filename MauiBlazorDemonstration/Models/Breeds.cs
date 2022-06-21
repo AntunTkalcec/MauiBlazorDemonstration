@@ -9,7 +9,8 @@ namespace MauiBlazorDemonstration.Models
     public static class Breeds
     {
         public static List<string> BreedNames 
-        { get
+        { 
+            get
             {
                 List<string> names = new()
                 {

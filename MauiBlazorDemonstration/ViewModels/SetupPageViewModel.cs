@@ -15,22 +15,38 @@ namespace MauiBlazorDemonstration.ViewModels
     public partial class SetupPageViewModel : BaseViewModel
     {
         [ObservableProperty]
-        bool confirmEnabled;
+        [NotifyPropertyChangedFor(nameof(ConfirmEnabled))]
+        bool confirmIsEnabled;
+        public bool ConfirmEnabled => confirmIsEnabled;
         public SetupPageViewModel()
         {
             Title = "Setup";
+            ConfirmIsEnabled = false;
         }
         public async Task ConfirmAsync(int btn)
         {
-            await SecureStorage.SetAsync("SetupComplete", "1");
+            ConfirmIsEnabled = false;
+            Preferences.Set("SetupComplete", "1");
+
+            switch (btn)
+            {
+                case 0: 
+                    await SecureStorage.SetAsync("Language", "en-US");
+                    await Shell.Current.DisplayAlert("Done", "Language has been set to English.", "OK");
+                    break;
+                case 1:
+                    await SecureStorage.SetAsync("Language", "hr-HR");
+                    await Shell.Current.DisplayAlert("Gotovo", "Jezik je postavljen na Hrvatski.", "OK");
+                    break;
+            }
 
             //set language
 
-            Application.Current.MainPage = new AppShell();
+            //await Shell.Current.GoToAsync(nameof(HomePage), true);
         }
         public Task LanguageSelected()
         {
-            confirmEnabled = true;
+            ConfirmIsEnabled = true;
             return Task.CompletedTask;
         }
     }
