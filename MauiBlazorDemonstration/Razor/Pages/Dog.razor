@@ -1,0 +1,44 @@
+﻿@page "/dog/{Doggo}/{Breed}"
+
+@if (Doggo == null)
+{
+    <h3>Loading...</h3>
+}
+else
+{
+    <div>
+        <h3 style="font-size: 30px;">Here's some info about the dog breed you chose</h3>
+        <img src=@Doggo.image_link />
+        <h5>Breed: @Breed</h5>
+        <h5>Name: @Doggo.name</h5>
+        <h5>Relationship with children: @Doggo.good_with_children/5</h5>
+        <h5>Relationship with dogs: @Doggo.good_with_other_dogs/5</h5>
+        <h5>Shedding: @Doggo.shedding/5</h5>
+        <h5>Grooming: @Doggo.grooming/5</h5>
+        <h5>Drooling: @Doggo.drooling/5</h5>
+        <h5>Coat length: @Doggo.coat_length/5</h5>
+        <h5>Relationship with strangers: @Doggo.good_with_strangers/5</h5>
+        <h5>Playfulness: @Doggo.playfulness/5</h5>
+        <h5>Protectiveness: @Doggo.protectiveness/5</h5>
+        <h5>Trainability: @Doggo.trainability/5</h5>
+        <h5>Energy: @Doggo.energy</h5>
+        <h5>Barking: @Doggo.barking</h5>
+        <h5>Min. life expectancy: @Doggo.min_life_expectancy</h5>
+        <h5>Max. life expectancy: @Doggo.max_life_expectancy</h5>
+        <h5>Male max. height: @Doggo.max_height_male</h5>
+        <h5>Female max. height: @Doggo.max_height_female</h5>
+        <h5>Male max. weight: @Doggo.max_weight_male</h5>
+        <h5>Female max. weight: @Doggo.max_weight_female</h5>
+        <h5>Male min. height: @Doggo.min_height_male</h5>
+        <h5>Female min. height: @Doggo.min_height_female</h5>
+        <h5>Male min. weight: @Doggo.min_weight_male</h5>
+        <h5>Female min. weight: @Doggo.min_weight_female</h5>
+    </div>
+}
+
+@code {
+    [Parameter]
+    public Models.Dog Doggo { get; set; } 
+    [Parameter]
+    public string Breed { get; set; }
+}

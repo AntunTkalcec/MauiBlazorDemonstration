@@ -9,11 +9,12 @@ using System.Threading.Tasks;
 
 namespace MauiBlazorDemonstration.Data
 {
-    public class DogService
+    public class DogService : IDogService
     {
         private readonly HttpClient httpClient;
         public List<Dog> Dog;
         private string apiKey;
+        public static IDogService Current { get; }
         public DogService()
         {
             httpClient = new();

@@ -26,10 +26,11 @@
                 <Button Text="Confirm" BackgroundColor="Transparent" FontSize="20" Command="{Binding ConfirmCommand}" 
                     CommandParameter="{Binding SelectedItem, Source={x:Reference picker}}"/>
             </Border>
-
-            <ActivityIndicator HorizontalOptions="FillAndExpand" IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}" VerticalOptions="CenterAndExpand" Color="Black"
-                           Scale="1.5" Margin="0, 50, 0, 0"/>
         </StackLayout>
-
+        <VerticalStackLayout>
+            <ActivityIndicator HorizontalOptions="CenterAndExpand" IsRunning="{Binding IsBusy}" IsVisible="True" VerticalOptions="CenterAndExpand" Color="{Binding ActivityColor}"
+                               Scale="2" Margin="0, 150, 0, 0"/>
+        </VerticalStackLayout>
+        
     </VerticalStackLayout>
 </ContentPage>

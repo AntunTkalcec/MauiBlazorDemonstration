@@ -6,18 +6,72 @@
              Title="{Binding Breed}"
              xmlns:models="clr-namespace:MauiBlazorDemonstration.Models"
              x:DataType="viewmodels:DogsNativeViewModel">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label" x:Key="LabelStyle">
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="FontSize" Value="14"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <VerticalStackLayout>
         <Label FontSize="30" VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" 
-               Text="Here's some info about the dog breed you chose"/>
-        <CollectionView ItemsSource="{Binding Doggo}">
-            <CollectionView.ItemTemplate>
-                <DataTemplate x:DataType="models:Dog">
-                    <VerticalStackLayout>
-                        <Image Source="{Binding image_link}" Aspect="AspectFill" HeightRequest="160" HorizontalOptions="Center" VerticalOptions="StartAndExpand" WidthRequest="160"/>
-                        <Label Text="{Binding good_with_children, StringFormat='Good with children: {0}'}"/>
-                    </VerticalStackLayout>
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
-        </CollectionView>
+               Text="Here's some info about the dog breed you chose" FontAttributes="Bold"/>
+        <ContentView x:Name="DogView" VerticalOptions="FillAndExpand">
+            <Frame VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Margin="20" HasShadow="True">
+                <Frame.Shadow>
+                    <Shadow Brush="Black" Radius="40" Offset="40, 40" Opacity="0.6"/>
+                </Frame.Shadow>
+                <VerticalStackLayout Spacing="15">
+                    <HorizontalStackLayout>
+                        <Frame Margin="0" Padding="0" IsClippedToBounds="True" CornerRadius="80" HeightRequest="130" WidthRequest="130" HorizontalOptions="Start" HasShadow="True">
+                            <Frame.Shadow>
+                                <Shadow Brush="Black" Offset="5, 5" Radius="40" Opacity="0.6"/>
+                            </Frame.Shadow>
+                            <Image Aspect="AspectFill" HeightRequest="130" HorizontalOptions="Center" VerticalOptions="Center" 
+                                       Source="{Binding ChosenDoggo.image_link}" WidthRequest="130"/>
+                        </Frame>
+                        <VerticalStackLayout Spacing="10" Padding="0, 40, 0, 0" Margin="5, 0, 0, 0">
+                            <Label Text="{Binding BindingContext.Breed, Source={x:Reference DogView}, StringFormat='Breed: {0}'}" 
+                                              Style="{StaticResource LabelStyle}" VerticalOptions="CenterAndExpand"/>
+                            <Label Text="{Binding ChosenDoggo.name, StringFormat='Name: {0}'}" Style="{StaticResource LabelStyle}" VerticalOptions="CenterAndExpand"/>
+                        </VerticalStackLayout>
+                    </HorizontalStackLayout>
+                    <ScrollView HeightRequest="350" VerticalScrollBarVisibility="Always">
+                        <VerticalStackLayout Spacing="10">
+                            <Label Text="{Binding ChosenDoggo.good_with_children, StringFormat='Relationship with children: {0}/5'}" Style="{StaticResource LabelStyle}"/>
+                            <Label Text="{Binding ChosenDoggo.good_with_other_dogs, StringFormat='Relationship with dogs: {0}/5'}" Style="{StaticResource LabelStyle}"/>
+                            <Label Text="{Binding ChosenDoggo.shedding, StringFormat='Shedding: {0}/5'}" Style="{StaticResource LabelStyle}"/>
+                            <Label Text="{Binding ChosenDoggo.grooming, StringFormat='Grooming: {0}/5'}" Style="{StaticResource LabelStyle}"/>
+                            <Label Text="{Binding ChosenDoggo.drooling, StringFormat='Drooling: {0}/5'}" Style="{StaticResource LabelStyle}"/>
+                            <Label Text="{Binding ChosenDoggo.coat_length, StringFormat='Coat length: {0}/5'}" Style="{StaticResource LabelStyle}"/>
+                            <Label Text="{Binding ChosenDoggo.good_with_strangers, StringFormat='Relationship with strangers: {0}/5'}" Style="{StaticResource LabelStyle}"/>
+                            <Label Text="{Binding ChosenDoggo.playfulness, StringFormat='Playfulness: {0}/5'}" Style="{StaticResource LabelStyle}"/>
+                            <Label Text="{Binding ChosenDoggo.protectiveness, StringFormat='Protectiveness: {0}/5'}" Style="{StaticResource LabelStyle}"/>
+                            <Label Text="{Binding ChosenDoggo.trainability, StringFormat='Trainability: {0}/5'}" Style="{StaticResource LabelStyle}"/>
+                            <Label Text="{Binding ChosenDoggo.energy, StringFormat='Energy: {0}/5'}" Style="{StaticResource LabelStyle}"/>
+                            <Label Text="{Binding ChosenDoggo.barking, StringFormat='Barking: {0}/5'}" Style="{StaticResource LabelStyle}"/>
+                            <Label Text="{Binding ChosenDoggo.min_life_expectancy, StringFormat='Min. life expectancy: {0}'}" Style="{StaticResource LabelStyle}"/>
+                            <Label Text="{Binding ChosenDoggo.max_life_expectancy, StringFormat='Max. life expectancy: {0}'}" Style="{StaticResource LabelStyle}"/>
+                            <Label Text="{Binding ChosenDoggo.max_height_male, StringFormat='Male max. height: {0}'}" Style="{StaticResource LabelStyle}"/>
+                            <Label Text="{Binding ChosenDoggo.max_height_female, StringFormat='Female max. height: {0}'}" Style="{StaticResource LabelStyle}"/>
+                            <Label Text="{Binding ChosenDoggo.max_weight_male, StringFormat='Male max. weight: {0}'}" Style="{StaticResource LabelStyle}"/>
+                            <Label Text="{Binding ChosenDoggo.max_weight_female, StringFormat='Female max. weight: {0}'}" Style="{StaticResource LabelStyle}"/>
+                            <Label Text="{Binding ChosenDoggo.min_height_male, StringFormat='Male min. height: {0}'}" Style="{StaticResource LabelStyle}"/>
+                            <Label Text="{Binding ChosenDoggo.min_height_female, StringFormat='Female min. height: {0}'}" Style="{StaticResource LabelStyle}"/>
+                            <Label Text="{Binding ChosenDoggo.min_weight_male, StringFormat='Male min. weight: {0}'}" Style="{StaticResource LabelStyle}"/>
+                            <Label Text="{Binding ChosenDoggo.min_weight_female, StringFormat='Female min. weight: {0}'}" Style="{StaticResource LabelStyle}"/>
+                        </VerticalStackLayout>
+                    </ScrollView>
+                </VerticalStackLayout>
+            </Frame>
+        </ContentView>
+        <Button HorizontalOptions="Center" Text="See it using Blazor" FontAttributes="Bold" BackgroundColor="{DynamicResource PrimaryColor}" CornerRadius="30" Margin="50, 0, 50, 0"
+                Command="{Binding ShowDoggoUsingBlazorCommand}">
+            <Button.Shadow>
+                <Shadow Brush="Black" Offset="10, 10" Radius="40" Opacity="0.6"/>
+            </Button.Shadow>
+        </Button>
     </VerticalStackLayout>
 </ContentPage>

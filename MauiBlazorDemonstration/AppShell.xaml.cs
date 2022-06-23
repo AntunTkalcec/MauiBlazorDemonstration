@@ -11,5 +11,6 @@ public partial class AppShell : Shell
         Routing.RegisterRoute(nameof(HomePage), typeof(HomePage));
         Routing.RegisterRoute(nameof(SetupPage), typeof(SetupPage));
         Routing.RegisterRoute(nameof(DogsDisplayNativePage), typeof(DogsDisplayNativePage));
+        Routing.RegisterRoute(nameof(DogsDisplayBlazorPage), typeof(DogsDisplayBlazorPage));
     }
 }

@@ -11,6 +11,11 @@ namespace MauiBlazorDemonstration.ViewModels
         [ObservableProperty]
         string title;
 
+        [ObservableProperty]
+        [NotifyPropertyChangedFor(nameof(ActivityColorValue))]
+        Color activityColor;
+
         public bool IsNotBusy => !IsBusy;
+        public Color ActivityColorValue => ActivityColor;
     }
 }

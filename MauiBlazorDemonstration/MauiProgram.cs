@@ -25,18 +25,23 @@ public static class MauiProgram
 
 		builder.Services.AddSingleton(Connectivity.Current);
 		builder.Services.AddSingleton(SecureStorage.Default);
-
-		builder.Services.AddSingleton<DogService>();
+		builder.Services.AddScoped<IDogService, DogService>();
 		builder.Services.AddSingleton<WeatherForecastService>();
 		builder.Services.AddSingleton<MainPage>();
+		builder.Services.AddSingleton<AppShell>();
 
 
 		builder.Services.AddTransient<SetupPageViewModel>();
 		builder.Services.AddTransient<SetupPage>();
+
 		builder.Services.AddTransient<HomePage>();
+		builder.Services.AddTransient<HomePageViewModel>();
+
 		builder.Services.AddTransient<DogsDisplayNativePage>();
 		builder.Services.AddTransient<DogsNativeViewModel>();
-		builder.Services.AddTransient<HomePageViewModel>();
+		
+		builder.Services.AddTransient<DogsDisplayBlazorPage>();
+		builder.Services.AddTransient<DogsBlazorViewModel>();
 
 		return builder.Build();
 	}
