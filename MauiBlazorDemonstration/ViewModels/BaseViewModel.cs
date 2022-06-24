@@ -1,4 +1,5 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
+using MauiBlazorDemonstration.Helpers;
 
 namespace MauiBlazorDemonstration.ViewModels
 {
@@ -17,5 +18,15 @@ namespace MauiBlazorDemonstration.ViewModels
 
         public bool IsNotBusy => !IsBusy;
         public Color ActivityColorValue => ActivityColor;
+
+        public LanguageHelper Language
+        {
+            get
+            {
+                return LanguageHelper.Instance;
+            }
+        }
+
+        public AppTheme currentTheme = Application.Current.UserAppTheme;
     }
 }

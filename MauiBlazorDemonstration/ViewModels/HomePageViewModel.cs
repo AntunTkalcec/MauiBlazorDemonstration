@@ -21,11 +21,23 @@ namespace MauiBlazorDemonstration.ViewModels
 
         public HomePageViewModel(IDogService dogService, IConnectivity connectivity)
         {
-            Title = "Home";
-            ActivityColor = Color.FromArgb("#FFF");
+            SetTitle();
+            ActivityColor = Colors.Transparent;
             this.dogService = dogService;
             this.connectivity = connectivity;
             DogBreeds = Breeds.BreedNames;
+        }
+
+        private async void SetTitle()
+        {
+            if (await SecureStorage.GetAsync("Language") == "en-US")
+            {
+                Title = "Home";
+            }
+            else
+            {
+                Title = "Početni ekran";
+            }
         }
 
         [RelayCommand]
@@ -36,7 +48,7 @@ namespace MauiBlazorDemonstration.ViewModels
                 return;
             }
             IsBusy = true;
-            ActivityColor = Color.FromArgb("#000");
+            ActivityColor = Color.FromArgb("#3AA0B4");
             try
             {               
                 if (Connectivity.NetworkAccess != NetworkAccess.Internet)
@@ -61,7 +73,7 @@ namespace MauiBlazorDemonstration.ViewModels
             {
                 Doggos = null;
                 Doggo = null;
-                ActivityColor = Color.FromArgb("#000");
+                ActivityColor = Colors.Transparent;
                 IsBusy = false;
             }           
         }

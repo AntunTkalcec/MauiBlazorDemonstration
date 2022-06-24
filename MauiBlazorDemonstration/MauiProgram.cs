@@ -26,10 +26,6 @@ public static class MauiProgram
 		builder.Services.AddSingleton(Connectivity.Current);
 		builder.Services.AddSingleton(SecureStorage.Default);
 		builder.Services.AddScoped<IDogService, DogService>();
-		builder.Services.AddSingleton<WeatherForecastService>();
-		builder.Services.AddSingleton<MainPage>();
-		builder.Services.AddSingleton<AppShell>();
-
 
 		builder.Services.AddTransient<SetupPageViewModel>();
 		builder.Services.AddTransient<SetupPage>();

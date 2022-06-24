@@ -29,7 +29,7 @@ namespace MauiBlazorDemonstration.ViewModels
         {
             await Shell.Current.GoToAsync(nameof(DogsDisplayBlazorPage), true, new Dictionary<string, object>
             {
-                { "Doggo", ChosenDoggo }, { "Breed", Breed }
+                { "Doggo", ChosenDoggo }, { "Breed", Breed }, { "vm", this }
             });
         }
     }

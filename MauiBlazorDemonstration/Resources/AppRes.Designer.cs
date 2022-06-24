@@ -59,5 +59,293 @@ namespace MauiBlazorDemonstration.Resources {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Barking /5: .
+        /// </summary>
+        internal static string Barking {
+            get {
+                return ResourceManager.GetString("Barking", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to See it using Blazor.
+        /// </summary>
+        internal static string BlazorBtn {
+            get {
+                return ResourceManager.GetString("BlazorBtn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Breed: .
+        /// </summary>
+        internal static string Breed {
+            get {
+                return ResourceManager.GetString("Breed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Relationship with children /5: .
+        /// </summary>
+        internal static string Children {
+            get {
+                return ResourceManager.GetString("Children", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Coat length /5: .
+        /// </summary>
+        internal static string CoatLength {
+            get {
+                return ResourceManager.GetString("CoatLength", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Confirm.
+        /// </summary>
+        internal static string ConfirmBtn {
+            get {
+                return ResourceManager.GetString("ConfirmBtn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hrvatski.
+        /// </summary>
+        internal static string CroatianBtn {
+            get {
+                return ResourceManager.GetString("CroatianBtn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Drooling /5: .
+        /// </summary>
+        internal static string Drooling {
+            get {
+                return ResourceManager.GetString("Drooling", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Energy /5: .
+        /// </summary>
+        internal static string Energy {
+            get {
+                return ResourceManager.GetString("Energy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to English.
+        /// </summary>
+        internal static string EnglishBtn {
+            get {
+                return ResourceManager.GetString("EnglishBtn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Grooming /5: .
+        /// </summary>
+        internal static string Grooming {
+            get {
+                return ResourceManager.GetString("Grooming", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select a dog you want to know about!.
+        /// </summary>
+        internal static string HomeTitle {
+            get {
+                return ResourceManager.GetString("HomeTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Female max. height: .
+        /// </summary>
+        internal static string MaxHeightFemale {
+            get {
+                return ResourceManager.GetString("MaxHeightFemale", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Male max. height: .
+        /// </summary>
+        internal static string MaxHeightMale {
+            get {
+                return ResourceManager.GetString("MaxHeightMale", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Max. life expectancy: .
+        /// </summary>
+        internal static string MaxLife {
+            get {
+                return ResourceManager.GetString("MaxLife", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Female max. weight: .
+        /// </summary>
+        internal static string MaxWeightFemale {
+            get {
+                return ResourceManager.GetString("MaxWeightFemale", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Male max. weight: .
+        /// </summary>
+        internal static string MaxWeightMale {
+            get {
+                return ResourceManager.GetString("MaxWeightMale", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Female min. height: .
+        /// </summary>
+        internal static string MinHeightFemale {
+            get {
+                return ResourceManager.GetString("MinHeightFemale", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Male min. height: .
+        /// </summary>
+        internal static string MinHeightMale {
+            get {
+                return ResourceManager.GetString("MinHeightMale", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Min. life expectancy: .
+        /// </summary>
+        internal static string MinLife {
+            get {
+                return ResourceManager.GetString("MinLife", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Female min. weight: .
+        /// </summary>
+        internal static string MinWeightFemale {
+            get {
+                return ResourceManager.GetString("MinWeightFemale", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Male min. weight: .
+        /// </summary>
+        internal static string MinWeightMale {
+            get {
+                return ResourceManager.GetString("MinWeightMale", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Name: .
+        /// </summary>
+        internal static string Name {
+            get {
+                return ResourceManager.GetString("Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Here&apos;s some info about the dog breed you chose.
+        /// </summary>
+        internal static string NativeTitle {
+            get {
+                return ResourceManager.GetString("NativeTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Relationship with dogs /5: .
+        /// </summary>
+        internal static string OtherDogs {
+            get {
+                return ResourceManager.GetString("OtherDogs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pick a breed.
+        /// </summary>
+        internal static string PickerTitle {
+            get {
+                return ResourceManager.GetString("PickerTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Playfulness /5: .
+        /// </summary>
+        internal static string Playfulness {
+            get {
+                return ResourceManager.GetString("Playfulness", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Protectiveness /5: .
+        /// </summary>
+        internal static string Protectiveness {
+            get {
+                return ResourceManager.GetString("Protectiveness", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Choose a language....
+        /// </summary>
+        internal static string SetupTitle {
+            get {
+                return ResourceManager.GetString("SetupTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Shedding /5: .
+        /// </summary>
+        internal static string Shedding {
+            get {
+                return ResourceManager.GetString("Shedding", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Relationship with strangers /5: .
+        /// </summary>
+        internal static string Strangers {
+            get {
+                return ResourceManager.GetString("Strangers", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Trainability /5: .
+        /// </summary>
+        internal static string Trainability {
+            get {
+                return ResourceManager.GetString("Trainability", resourceCulture);
+            }
+        }
     }
 }

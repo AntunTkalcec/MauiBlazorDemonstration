@@ -8,34 +8,36 @@
         <viewmodels:SetupPageViewModel/>
     </ContentPage.BindingContext>
     <VerticalStackLayout>
-        <Label Text="Choose a language..." HorizontalOptions="CenterAndExpand" VerticalOptions="Start" FontSize="30"/>
+        <Label Text="{Binding Language[SetupTitle]}" HorizontalOptions="CenterAndExpand" VerticalOptions="Start" FontSize="30"/>
         <HorizontalStackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" HeightRequest="350">
             <Border Stroke="{DynamicResource Gradient1}" StrokeThickness="6" StrokeShape="RoundRectangle 40, 0, 0, 40" 
-                    Background="{DynamicResource TertiaryColor}" Padding="0" HorizontalOptions="StartAndExpand" 
+                    BackgroundColor="{AppThemeBinding Light={StaticResource TertiaryColor}, Dark={StaticResource TertiaryColorDark}}" Padding="0" HorizontalOptions="StartAndExpand" 
                     VerticalOptions="Center" HeightRequest="100" WidthRequest="140">
                 <Border.Shadow>
-                    <Shadow Brush="Black" Offset="10,10" Radius="20" Opacity="0.5"/>
+                    <Shadow Brush="{AppThemeBinding Light={StaticResource Gradient1}, Dark={StaticResource Gradient1Dark}}" Offset="10,10" Radius="20" Opacity="0.5"/>
                 </Border.Shadow>
-                <Button Text="English" BackgroundColor="Transparent" FontSize="20" x:Name="EnglishBtn" Clicked="EnglishBtnTapped"/>
+                <Button Text="{Binding Language[EnglishBtn]}" BackgroundColor="Transparent" FontSize="20" x:Name="EnglishBtn" Clicked="EnglishBtnTapped"/>
             </Border>
                
-            <BoxView WidthRequest="2" Color="Black" Margin="30, 100, 30, 100"/>
+            <BoxView WidthRequest="2" Color="{AppThemeBinding Light=Black, Dark=White}" Margin="30, 100, 30, 100"/>
 
-            <Border Stroke="{DynamicResource Gradient1}" StrokeThickness="6" StrokeShape="RoundRectangle 0, 40, 40, 0" 
-                    Background="{DynamicResource TertiaryColor}" Padding="0" HorizontalOptions="EndAndExpand" 
+            <Border Stroke="{AppThemeBinding Light={StaticResource Gradient1}, Dark={StaticResource Gradient1Dark}}" StrokeThickness="6" StrokeShape="RoundRectangle 0, 40, 40, 0" 
+                    BackgroundColor="{AppThemeBinding Light={StaticResource TertiaryColor}, Dark={StaticResource TertiaryColorDark}}" Padding="0" HorizontalOptions="EndAndExpand" 
                     VerticalOptions="Center" HeightRequest="100" WidthRequest="140">
                 <Border.Shadow>
                     <Shadow Brush="Black" Offset="10,10" Radius="20" Opacity="0.5"/>
                 </Border.Shadow>
-                <Button Text="Croatian" BackgroundColor="Transparent" FontSize="20" x:Name="CroatianBtn" Clicked="CroatianBtnTapped"/>
+                <Button Text="{Binding Language[CroatianBtn]}" BackgroundColor="Transparent" FontSize="20" x:Name="CroatianBtn" Clicked="CroatianBtnTapped"/>
             </Border>
         </HorizontalStackLayout>
-        <Border Stroke="{DynamicResource Gradient2}" StrokeThickness="6" StrokeShape="Ellipse" Background="{DynamicResource TertiaryColor}" Padding="0" WidthRequest="130" 
+        <Border Stroke="{AppThemeBinding Light={StaticResource Gradient2}, Dark={StaticResource Gradient2Dark}}"
+                StrokeThickness="6" StrokeShape="Ellipse" BackgroundColor="{AppThemeBinding Light={StaticResource TertiaryColor}, Dark={StaticResource TertiaryColorDark}}" Padding="0" WidthRequest="130" 
                 HeightRequest="130">
             <Border.Shadow>
                 <Shadow Brush="Black" Offset="10,10" Radius="40" Opacity="0.6"/>
             </Border.Shadow>
-            <Button Text="Confirm" BackgroundColor="Transparent" FontSize="20" IsEnabled="{Binding ConfirmEnabled}" Clicked="ConfirmBtnTapped" x:Name="ConfirmBtn"/>
+            <Button Text="{Binding Language[ConfirmBtn]}" BackgroundColor="Transparent" FontSize="20" IsEnabled="{Binding ConfirmEnabled}" 
+                    Clicked="ConfirmBtnTapped" x:Name="ConfirmBtn"/>
         </Border>
     </VerticalStackLayout>
 </ContentPage>

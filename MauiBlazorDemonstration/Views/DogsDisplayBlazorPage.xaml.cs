@@ -19,25 +19,11 @@ public partial class DogsDisplayBlazorPage : ContentPage
         base.OnAppearing();
 		RootComp.Parameters = new Dictionary<string, object>()
 		{
-			{ "Doggo", viewmodel.Doggo }, { "Breed", viewmodel.Breed }
+			{ "Doggo", viewmodel.Doggo }, { "Breed", viewmodel.Breed }, { "vm", viewmodel.Vm }
 		};
-		//BlazorWebView blazorView = new()
-		//{
-		//	HostPage = "wwwroot/index.html",
-
-		//      };
-		//RootComponent RootComp = new()
-		//{
-		//	Selector = "#app",
-		//	ComponentType = typeof(Razor.Pages.Dog),
-		//	Parameters = new Dictionary<string, object>()
-		//	{
-		//		{ "Doggo", viewmodel.Doggo }
-		//	}
-		//};
-
-		//blazorView.RootComponents.Add(RootComp);
-
-		//Stack.Children.Add(blazorView);
+	}
+	protected override bool OnBackButtonPressed()
+	{
+		return base.OnBackButtonPressed();
 	}
 }

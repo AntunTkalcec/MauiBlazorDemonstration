@@ -14,9 +14,22 @@
             <Color x:Key="SecondaryColor">#DDDD22</Color>
             <Color x:Key="TertiaryColor">#DAE7BE</Color>
 
+            <Color x:Key="PageBackgroundColorDark">#121212</Color>
+            <Color x:Key="PrimaryTextColorDark">White</Color>
+            <Color x:Key="ShellBackgroundColorDark">#252525</Color>
+            <Color x:Key="FlyoutColorDark">#232323</Color>
+            <Color x:Key="PrimaryColorDark">#3AA0B4</Color>
+            <Color x:Key="SecondaryColorDark">#AAAA00</Color>
+            <Color x:Key="TertiaryColorDark">#A6B38B</Color>
+
             <LinearGradientBrush StartPoint="0, 0" EndPoint="1, 1" x:Key="Gradient1">
                 <GradientStop Color="{StaticResource SecondaryColor}" Offset="0.0"/>
                 <GradientStop Color="{StaticResource PrimaryColor}" Offset="1.0"/>
+            </LinearGradientBrush>
+
+            <LinearGradientBrush StartPoint="0, 0" EndPoint="1, 1" x:Key="Gradient1Dark">
+                <GradientStop Color="{StaticResource SecondaryColorDark}" Offset="0.0"/>
+                <GradientStop Color="{StaticResource PrimaryColorDark}" Offset="1.0"/>
             </LinearGradientBrush>
 
             <LinearGradientBrush StartPoint="0, 0" EndPoint="1, 1" x:Key="Gradient2">
@@ -24,20 +37,25 @@
                 <GradientStop Color="{StaticResource SecondaryColor}" Offset="1.0"/>
             </LinearGradientBrush>
 
+            <LinearGradientBrush StartPoint="0, 0" EndPoint="1, 1" x:Key="Gradient2Dark">
+                <GradientStop Color="{StaticResource PrimaryColorDark}" Offset="0.0"/>
+                <GradientStop Color="{StaticResource SecondaryColorDark}" Offset="1.0"/>
+            </LinearGradientBrush>
+
             <Style TargetType="Label">
-                <Setter Property="TextColor" Value="{DynamicResource PrimaryTextColor}" />
+                <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource PrimaryTextColor}, Dark={StaticResource PrimaryTextColorDark}}"/>
                 <Setter Property="FontFamily" Value="OpenSansRegular" />
             </Style>
 
             <Style TargetType="Button">
-                <Setter Property="TextColor" Value="{DynamicResource PrimaryTextColor}" />
+                <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource PrimaryTextColor}, Dark={StaticResource PrimaryTextColorDark}}"/>
                 <Setter Property="FontFamily" Value="OpenSansRegular" />
                 <Setter Property="BackgroundColor" Value="#2b0b98" />
                 <Setter Property="Padding" Value="14,10" />
             </Style>
 
             <Style TargetType="Page" ApplyToDerivedTypes="True">
-                <Setter Property="BackgroundColor" Value="{DynamicResource PageBackgroundColor}"/>
+                <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource PageBackgroundColor}, Dark={StaticResource PageBackgroundColorDark}}"/>
             </Style>
 
         </ResourceDictionary>

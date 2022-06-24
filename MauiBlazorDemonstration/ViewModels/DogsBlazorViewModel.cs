@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace MauiBlazorDemonstration.ViewModels
 {
-    [QueryProperty(nameof(Doggo), "Doggo"), QueryProperty(nameof(Breed), "Breed")]
+    [QueryProperty(nameof(Doggo), "Doggo"), QueryProperty(nameof(Breed), "Breed"), QueryProperty(nameof(Vm), "vm")]
     public partial class DogsBlazorViewModel : BaseViewModel
     {
         [ObservableProperty]
@@ -16,6 +16,9 @@ namespace MauiBlazorDemonstration.ViewModels
 
         [ObservableProperty]
         string breed;
+
+        [ObservableProperty]
+        DogsNativeViewModel vm;
 
         public DogsBlazorViewModel()
         {
