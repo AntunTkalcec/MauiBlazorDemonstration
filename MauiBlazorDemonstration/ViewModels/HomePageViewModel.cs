@@ -21,23 +21,10 @@ namespace MauiBlazorDemonstration.ViewModels
 
         public HomePageViewModel(IDogService dogService, IConnectivity connectivity)
         {
-            SetTitle();
             ActivityColor = Colors.Transparent;
             this.dogService = dogService;
             this.connectivity = connectivity;
             DogBreeds = Breeds.BreedNames;
-        }
-
-        private async void SetTitle()
-        {
-            if (await SecureStorage.GetAsync("Language") == "en-US")
-            {
-                Title = "Home";
-            }
-            else
-            {
-                Title = "Početni ekran";
-            }
         }
 
         [RelayCommand]

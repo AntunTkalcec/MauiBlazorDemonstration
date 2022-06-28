@@ -61,7 +61,7 @@ namespace MauiBlazorDemonstration.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Barking /5: .
+        ///   Looks up a localized string similar to Barking: .
         /// </summary>
         internal static string Barking {
             get {
@@ -88,7 +88,7 @@ namespace MauiBlazorDemonstration.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Relationship with children /5: .
+        ///   Looks up a localized string similar to Relationship with children: .
         /// </summary>
         internal static string Children {
             get {
@@ -97,7 +97,7 @@ namespace MauiBlazorDemonstration.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Coat length /5: .
+        ///   Looks up a localized string similar to Coat length:  .
         /// </summary>
         internal static string CoatLength {
             get {
@@ -124,7 +124,7 @@ namespace MauiBlazorDemonstration.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Drooling /5: .
+        ///   Looks up a localized string similar to Drooling: .
         /// </summary>
         internal static string Drooling {
             get {
@@ -133,7 +133,7 @@ namespace MauiBlazorDemonstration.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Energy /5: .
+        ///   Looks up a localized string similar to Energy: .
         /// </summary>
         internal static string Energy {
             get {
@@ -151,7 +151,7 @@ namespace MauiBlazorDemonstration.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Grooming /5: .
+        ///   Looks up a localized string similar to Grooming: .
         /// </summary>
         internal static string Grooming {
             get {
@@ -277,7 +277,7 @@ namespace MauiBlazorDemonstration.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Relationship with dogs /5: .
+        ///   Looks up a localized string similar to Relationship with dogs: .
         /// </summary>
         internal static string OtherDogs {
             get {
@@ -295,7 +295,7 @@ namespace MauiBlazorDemonstration.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Playfulness /5: .
+        ///   Looks up a localized string similar to Playfulness: .
         /// </summary>
         internal static string Playfulness {
             get {
@@ -304,7 +304,7 @@ namespace MauiBlazorDemonstration.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Protectiveness /5: .
+        ///   Looks up a localized string similar to Protectiveness: .
         /// </summary>
         internal static string Protectiveness {
             get {
@@ -322,7 +322,7 @@ namespace MauiBlazorDemonstration.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Shedding /5: .
+        ///   Looks up a localized string similar to Shedding: .
         /// </summary>
         internal static string Shedding {
             get {
@@ -331,7 +331,25 @@ namespace MauiBlazorDemonstration.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Relationship with strangers /5: .
+        ///   Looks up a localized string similar to Home.
+        /// </summary>
+        internal static string ShellHome {
+            get {
+                return ResourceManager.GetString("ShellHome", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Settings.
+        /// </summary>
+        internal static string ShellSettings {
+            get {
+                return ResourceManager.GetString("ShellSettings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Relationship with strangers: .
         /// </summary>
         internal static string Strangers {
             get {
@@ -340,7 +358,7 @@ namespace MauiBlazorDemonstration.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Trainability /5: .
+        ///   Looks up a localized string similar to Trainability: .
         /// </summary>
         internal static string Trainability {
             get {

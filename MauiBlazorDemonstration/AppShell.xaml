@@ -3,12 +3,27 @@
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        xmlns:views="clr-namespace:MauiBlazorDemonstration.Views"
        xmlns:local="clr-namespace:MauiBlazorDemonstration" 
+       xmlns:vm="clr-namespace:MauiBlazorDemonstration.ViewModels"
        BackgroundColor="{AppThemeBinding Light={StaticResource ShellBackgroundColor}, Dark={StaticResource ShellBackgroundColorDark}}"
-       FlyoutBackgroundColor="{AppThemeBinding Light={StaticResource FlyoutColor}, Dark={StaticResource FlyoutColorDark}}">
+       FlyoutBackgroundColor="{AppThemeBinding Light={StaticResource FlyoutColor}, Dark={StaticResource FlyoutColorDark}}"
+       x:DataType="vm:BaseViewModel">
+
 
     <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
-        <ShellContent Title="Home" Icon="home.png" ContentTemplate="{DataTemplate views:HomePage}" Route="HomePage"/>
+        <ShellContent Title="{Binding Language[ShellHome]}" Icon="{AppThemeBinding Light=home.png, Dark=homedark.png}" 
+                      ContentTemplate="{DataTemplate views:HomePage}" Route="HomePage"/>
     </FlyoutItem>
 
-    <ShellContent Title="Settings" Icon="setup.png" ContentTemplate="{DataTemplate views:SetupPage}" Route="SetupPage"/>
+    <ShellContent Title="{Binding Language[ShellSettings]}" Icon="{AppThemeBinding Light=setup.png, Dark=setupdark.png}" 
+                  ContentTemplate="{DataTemplate views:SetupPage}" Route="SetupPage"/>
+
+    <!--<Shell.ItemTemplate>
+        <DataTemplate>
+            <Grid ColumnDefinitions="0.2*, 0,8*">
+                <Image Source="{AppThemeBinding Light=home.png, Dark=homedark.png}" Margin="5" HeightRequest="45" BackgroundColor="{AppThemeBinding Light=White, Dark=Black}"/>
+                <Label Grid.Column="1" Text="{Binding Language[ShellHome]}" FontAttributes="Bold" VerticalTextAlignment="Center" 
+                       TextColor="{AppThemeBinding Light={StaticResource PrimaryTextColor}, Dark={StaticResource PrimaryTextColorDark}}"/>
+            </Grid>
+        </DataTemplate>
+    </Shell.ItemTemplate>-->
 </Shell>

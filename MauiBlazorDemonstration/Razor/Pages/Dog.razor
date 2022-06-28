@@ -10,73 +10,85 @@ else
     <html>
     <head>
         <style>
-            body {
+            /*body {
                 margin: 3px, 3px;
                 padding: 3px;
                 text-align: justify;
-            }
+                }
 
-            p {
+                p {
                 color: black;
                 font-size: 14px;
                 font-weight: bold;
                 margin: 1px;
-            }
+                }
 
-            h3 {
+                h3 {
                 font-size: 30px;
                 font-weight: bold;
                 align-content: center;
-            }
+                }
 
-            img {
+                img {
                 width: 160px;
                 height: 160px;
                 clip: auto;
                 margin: auto;
                 align-content: flex-start;
+                }*/
+
+
+            .card {
+                width: 340px;
+                margin: 30px auto;
             }
 
             .scrollable {
                 overflow-y: auto;
-                max-height: 530px;
+                max-height: 380px;
             }
         </style>
     </head>
     <body>
-        <div>
+        <div class="container">
             <h3>@vm.Language["NativeTitle"]</h3>
             <div class="card" style="height: 600px;">
-                <div class="card-body">
-                    <div>
-                        <img src=@Doggo.image_link />
-                        <p>@vm.Language["Breed"]: @Breed</p>
-                        <p>@vm.Language["Name"]: @Doggo.name</p>
+                <div>
+                    <img src=@Doggo.image_link alt="dog-image" style="float: left; width:160px; 
+                        height:160px; margin-top: 10px; margin-left:10px; border-radius: 50%;" />
+                    <div class="card-title" style="float: inline-end; margin-left: 25px; margin-top: 5px;">
+                        <p>@vm.Language["Breed"]</p>
+                        <p>@Breed</p>
+                        <p>@vm.Language["Name"]</p>
+                        <p>@Doggo.name</p>
                     </div>
-
+                </div>
+                <div class="card-body">
                     <div class="scrollable">
-                        <p>@vm.Language["Children"]@Doggo.good_with_children</p>
-                        <p>@vm.Language["OtherDogs"]@Doggo.good_with_other_dogs</p>
-                        <p>@vm.Language["Shedding"]@Doggo.shedding</p>
-                        <p>@vm.Language["Grooming"]@Doggo.grooming</p>
-                        <p>@vm.Language["Drooling"]@Doggo.drooling</p>
-                        <p>@vm.Language["CoatLength"]@Doggo.coat_length</p>
-                        <p>@vm.Language["Strangers"]@Doggo.good_with_strangers</p>
-                        <p>@vm.Language["Playfulness"]@Doggo.playfulness</p>
-                        <p>@vm.Language["Protectiveness"]@Doggo.protectiveness</p>
-                        <p>@vm.Language["Trainability"]@Doggo.trainability</p>
-                        <p>@vm.Language["Energy"]@Doggo.energy</p>
-                        <p>@vm.Language["Barking"]@Doggo.barking</p>
-                        <p>@vm.Language["MinLife"]@Doggo.min_life_expectancy</p>
-                        <p>@vm.Language["MaxLife"]@Doggo.max_life_expectancy</p>
-                        <p>@vm.Language["MaxHeightMale"]@Doggo.max_height_male</p>
-                        <p>@vm.Language["MaxHeightFemale"]@Doggo.max_height_female</p>
-                        <p>@vm.Language["MaxWeightMale"]@Doggo.max_weight_male</p>
-                        <p>@vm.Language["MaxWeightFemale"]@Doggo.max_weight_female</p>
-                        <p>@vm.Language["MinHeightMale"]@Doggo.min_height_male</p>
-                        <p>@vm.Language["MinHeightFemale"]@Doggo.min_height_female</p>
-                        <p>@vm.Language["MinWeightMale"]@Doggo.min_weight_male</p>
-                        <p>@vm.Language["MinWeightFemale"]@Doggo.min_weight_female</p>
+                        <div class="card-text">
+                            <p>@vm.Language["Children"]@Doggo.good_with_children</p>
+                            <p>@vm.Language["OtherDogs"]@Doggo.good_with_other_dogs</p>
+                            <p>@vm.Language["Shedding"]@Doggo.shedding</p>
+                            <p>@vm.Language["Grooming"]@Doggo.grooming</p>
+                            <p>@vm.Language["Drooling"]@Doggo.drooling</p>
+                            <p>@vm.Language["CoatLength"]@Doggo.coat_length</p>
+                            <p>@vm.Language["Strangers"]@Doggo.good_with_strangers</p>
+                            <p>@vm.Language["Playfulness"]@Doggo.playfulness</p>
+                            <p>@vm.Language["Protectiveness"]@Doggo.protectiveness</p>
+                            <p>@vm.Language["Trainability"]@Doggo.trainability</p>
+                            <p>@vm.Language["Energy"]@Doggo.energy</p>
+                            <p>@vm.Language["Barking"]@Doggo.barking</p>
+                            <p>@vm.Language["MinLife"]@Doggo.min_life_expectancy</p>
+                            <p>@vm.Language["MaxLife"]@Doggo.max_life_expectancy</p>
+                            <p>@vm.Language["MaxHeightMale"]@Doggo.max_height_male</p>
+                            <p>@vm.Language["MaxHeightFemale"]@Doggo.max_height_female</p>
+                            <p>@vm.Language["MaxWeightMale"]@Doggo.max_weight_male</p>
+                            <p>@vm.Language["MaxWeightFemale"]@Doggo.max_weight_female</p>
+                            <p>@vm.Language["MinHeightMale"]@Doggo.min_height_male</p>
+                            <p>@vm.Language["MinHeightFemale"]@Doggo.min_height_female</p>
+                            <p>@vm.Language["MinWeightMale"]@Doggo.min_weight_male</p>
+                            <p>@vm.Language["MinWeightFemale"]@Doggo.min_weight_female</p>
+                        </div>
                     </div>
                 </div>
             </div>

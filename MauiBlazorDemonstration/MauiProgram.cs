@@ -39,6 +39,8 @@ public static class MauiProgram
 		builder.Services.AddTransient<DogsDisplayBlazorPage>();
 		builder.Services.AddTransient<DogsBlazorViewModel>();
 
+		builder.Services.AddTransient<BaseViewModel>();
+
 		return builder.Build();
 	}
 }

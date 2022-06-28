@@ -22,8 +22,4 @@ public partial class DogsDisplayBlazorPage : ContentPage
 			{ "Doggo", viewmodel.Doggo }, { "Breed", viewmodel.Breed }, { "vm", viewmodel.Vm }
 		};
 	}
-	protected override bool OnBackButtonPressed()
-	{
-		return base.OnBackButtonPressed();
-	}
 }

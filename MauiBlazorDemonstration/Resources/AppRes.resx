@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Barking" xml:space="preserve">
-    <value>Barking /5: </value>
+    <value>Barking: </value>
   </data>
   <data name="BlazorBtn" xml:space="preserve">
     <value>See it using Blazor</value>
@@ -127,10 +127,10 @@
     <value>Breed: </value>
   </data>
   <data name="Children" xml:space="preserve">
-    <value>Relationship with children /5: </value>
+    <value>Relationship with children: </value>
   </data>
   <data name="CoatLength" xml:space="preserve">
-    <value>Coat length /5: </value>
+    <value>Coat length:  </value>
   </data>
   <data name="ConfirmBtn" xml:space="preserve">
     <value>Confirm</value>
@@ -139,16 +139,16 @@
     <value>Hrvatski</value>
   </data>
   <data name="Drooling" xml:space="preserve">
-    <value>Drooling /5: </value>
+    <value>Drooling: </value>
   </data>
   <data name="Energy" xml:space="preserve">
-    <value>Energy /5: </value>
+    <value>Energy: </value>
   </data>
   <data name="EnglishBtn" xml:space="preserve">
     <value>English</value>
   </data>
   <data name="Grooming" xml:space="preserve">
-    <value>Grooming /5: </value>
+    <value>Grooming: </value>
   </data>
   <data name="HomeTitle" xml:space="preserve">
     <value>Select a dog you want to know about!</value>
@@ -190,27 +190,33 @@
     <value>Here's some info about the dog breed you chose</value>
   </data>
   <data name="OtherDogs" xml:space="preserve">
-    <value>Relationship with dogs /5: </value>
+    <value>Relationship with dogs: </value>
   </data>
   <data name="PickerTitle" xml:space="preserve">
     <value>Pick a breed</value>
   </data>
   <data name="Playfulness" xml:space="preserve">
-    <value>Playfulness /5: </value>
+    <value>Playfulness: </value>
   </data>
   <data name="Protectiveness" xml:space="preserve">
-    <value>Protectiveness /5: </value>
+    <value>Protectiveness: </value>
   </data>
   <data name="SetupTitle" xml:space="preserve">
     <value>Choose a language...</value>
   </data>
   <data name="Shedding" xml:space="preserve">
-    <value>Shedding /5: </value>
+    <value>Shedding: </value>
+  </data>
+  <data name="ShellHome" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="ShellSettings" xml:space="preserve">
+    <value>Settings</value>
   </data>
   <data name="Strangers" xml:space="preserve">
-    <value>Relationship with strangers /5: </value>
+    <value>Relationship with strangers: </value>
   </data>
   <data name="Trainability" xml:space="preserve">
-    <value>Trainability /5: </value>
+    <value>Trainability: </value>
   </data>
 </root>

@@ -27,6 +27,6 @@ namespace MauiBlazorDemonstration.ViewModels
             }
         }
 
-        public AppTheme currentTheme = Application.Current.UserAppTheme;
+        
     }
 }

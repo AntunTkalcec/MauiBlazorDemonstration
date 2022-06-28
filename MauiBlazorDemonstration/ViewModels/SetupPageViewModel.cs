@@ -22,20 +22,7 @@ namespace MauiBlazorDemonstration.ViewModels
         public bool ConfirmEnabled => confirmIsEnabled;
         public SetupPageViewModel()
         {
-            SetTitle();
             ConfirmIsEnabled = false;
-        }
-
-        private async void SetTitle()
-        {
-            if (await SecureStorage.GetAsync("Language") == "en-US")
-            {
-                Title = "Settings";
-            }
-            else
-            {
-                Title = "Postavke";
-            }
         }
 
         public async Task ConfirmAsync(int btn)

@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiBlazorDemonstration.Views.SetupPage"
-             xmlns:viewmodels="clr-namespace:MauiBlazorDemonstration.ViewModels" Title="{Binding Title}"
+             xmlns:viewmodels="clr-namespace:MauiBlazorDemonstration.ViewModels" Title="{Binding Language[ShellSettings]}"
              Shell.PresentationMode="ModalAnimated">
     <ContentPage.BindingContext>
         <viewmodels:SetupPageViewModel/>
@@ -12,7 +12,7 @@
         <HorizontalStackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" HeightRequest="350">
             <Border Stroke="{DynamicResource Gradient1}" StrokeThickness="6" StrokeShape="RoundRectangle 40, 0, 0, 40" 
                     BackgroundColor="{AppThemeBinding Light={StaticResource TertiaryColor}, Dark={StaticResource TertiaryColorDark}}" Padding="0" HorizontalOptions="StartAndExpand" 
-                    VerticalOptions="Center" HeightRequest="100" WidthRequest="140">
+                    VerticalOptions="Center" HeightRequest="100" WidthRequest="140" x:Name="EnglishBorder">
                 <Border.Shadow>
                     <Shadow Brush="{AppThemeBinding Light={StaticResource Gradient1}, Dark={StaticResource Gradient1Dark}}" Offset="10,10" Radius="20" Opacity="0.5"/>
                 </Border.Shadow>
@@ -23,21 +23,21 @@
 
             <Border Stroke="{AppThemeBinding Light={StaticResource Gradient1}, Dark={StaticResource Gradient1Dark}}" StrokeThickness="6" StrokeShape="RoundRectangle 0, 40, 40, 0" 
                     BackgroundColor="{AppThemeBinding Light={StaticResource TertiaryColor}, Dark={StaticResource TertiaryColorDark}}" Padding="0" HorizontalOptions="EndAndExpand" 
-                    VerticalOptions="Center" HeightRequest="100" WidthRequest="140">
+                    VerticalOptions="Center" HeightRequest="100" WidthRequest="140" x:Name="CroatianBorder">
                 <Border.Shadow>
-                    <Shadow Brush="Black" Offset="10,10" Radius="20" Opacity="0.5"/>
+                    <Shadow Brush="{AppThemeBinding Light={StaticResource Gradient1}, Dark={StaticResource Gradient1Dark}}" Offset="10,10" Radius="20" Opacity="0.5"/>
                 </Border.Shadow>
                 <Button Text="{Binding Language[CroatianBtn]}" BackgroundColor="Transparent" FontSize="20" x:Name="CroatianBtn" Clicked="CroatianBtnTapped"/>
             </Border>
         </HorizontalStackLayout>
         <Border Stroke="{AppThemeBinding Light={StaticResource Gradient2}, Dark={StaticResource Gradient2Dark}}"
                 StrokeThickness="6" StrokeShape="Ellipse" BackgroundColor="{AppThemeBinding Light={StaticResource TertiaryColor}, Dark={StaticResource TertiaryColorDark}}" Padding="0" WidthRequest="130" 
-                HeightRequest="130">
+                HeightRequest="130" x:Name="ConfirmBorder">
             <Border.Shadow>
-                <Shadow Brush="Black" Offset="10,10" Radius="40" Opacity="0.6"/>
+                <Shadow Brush="{AppThemeBinding Light={StaticResource Gradient1}, Dark={StaticResource Gradient1Dark}}" Offset="10,10" Radius="40" Opacity="0.6"/>
             </Border.Shadow>
             <Button Text="{Binding Language[ConfirmBtn]}" BackgroundColor="Transparent" FontSize="20" IsEnabled="{Binding ConfirmEnabled}" 
-                    Clicked="ConfirmBtnTapped" x:Name="ConfirmBtn"/>
+                    Clicked="ConfirmBtnTapped"/>
         </Border>
     </VerticalStackLayout>
 </ContentPage>

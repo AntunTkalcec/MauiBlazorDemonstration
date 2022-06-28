@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Barking" xml:space="preserve">
-    <value>Lajanje /5: </value>
+    <value>Lajanje: </value>
   </data>
   <data name="BlazorBtn" xml:space="preserve">
     <value>Vidi u Blazoru</value>
@@ -127,10 +127,10 @@
     <value>Pasmina:</value>
   </data>
   <data name="Children" xml:space="preserve">
-    <value>Dobar s djecom /5: </value>
+    <value>Dobar s djecom: </value>
   </data>
   <data name="CoatLength" xml:space="preserve">
-    <value>Duljina dlake /5: </value>
+    <value>Duljina dlake: </value>
   </data>
   <data name="ConfirmBtn" xml:space="preserve">
     <value>Potvrdi</value>
@@ -139,16 +139,16 @@
     <value>Hrvatski</value>
   </data>
   <data name="Drooling" xml:space="preserve">
-    <value>Slinjenje /5: </value>
+    <value>Slinjenje: </value>
   </data>
   <data name="Energy" xml:space="preserve">
-    <value>Energija /5: </value>
+    <value>Energija: </value>
   </data>
   <data name="EnglishBtn" xml:space="preserve">
     <value>Engleski</value>
   </data>
   <data name="Grooming" xml:space="preserve">
-    <value>Dotjerivanje /5: </value>
+    <value>Dotjerivanje: </value>
   </data>
   <data name="HomeTitle" xml:space="preserve">
     <value>Odaberi psa o kojem želiš više znati!</value>
@@ -190,27 +190,33 @@
     <value>Evo nekih informacija o pasmini koju si izabrao</value>
   </data>
   <data name="OtherDogs" xml:space="preserve">
-    <value>Dobar s ostalim psima /5: </value>
+    <value>Dobar s ostalim psima: </value>
   </data>
   <data name="PickerTitle" xml:space="preserve">
     <value>Izaberi pasminu</value>
   </data>
   <data name="Playfulness" xml:space="preserve">
-    <value>Zaigran /5: </value>
+    <value>Zaigran: </value>
   </data>
   <data name="Protectiveness" xml:space="preserve">
-    <value>Zaštitnički nastrojen /5: </value>
+    <value>Zaštitnički nastrojen: </value>
   </data>
   <data name="SetupTitle" xml:space="preserve">
     <value>Izaberi jezik...</value>
   </data>
   <data name="Shedding" xml:space="preserve">
-    <value>Linjanje /5: </value>
+    <value>Linjanje: </value>
+  </data>
+  <data name="ShellHome" xml:space="preserve">
+    <value>Početni ekran</value>
+  </data>
+  <data name="ShellSettings" xml:space="preserve">
+    <value>Postavke</value>
   </data>
   <data name="Strangers" xml:space="preserve">
-    <value>Dobar sa strancima /5: </value>
+    <value>Dobar sa strancima:</value>
   </data>
   <data name="Trainability" xml:space="preserve">
-    <value>Istrenirljiv /5: </value>
+    <value>Istrenirljiv: </value>
   </data>
 </root>

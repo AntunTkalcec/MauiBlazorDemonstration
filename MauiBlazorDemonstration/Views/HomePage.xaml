@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiBlazorDemonstration.Views.HomePage"
              xmlns:viewmodels="clr-namespace:MauiBlazorDemonstration.ViewModels"
-             Title="{Binding Title}"
+             Title="{Binding Language[ShellHome]}"
              xmlns:models="clr-namespace:MauiBlazorDemonstration.Models"
              x:DataType="viewmodels:HomePageViewModel">
     <VerticalStackLayout>
@@ -31,7 +31,9 @@
         </StackLayout>
         <VerticalStackLayout>
             <ActivityIndicator HorizontalOptions="CenterAndExpand" IsRunning="{Binding IsBusy}" IsVisible="True" VerticalOptions="CenterAndExpand" Color="{Binding ActivityColor}"
-                               Scale="2" Margin="0, 150, 0, 0"/>
+                               Scale="2" Margin="0, 150, 0, 0">
+
+            </ActivityIndicator>
         </VerticalStackLayout>
         
     </VerticalStackLayout>

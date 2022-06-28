@@ -1,4 +1,5 @@
 ﻿using MauiBlazorDemonstration.Helpers;
+using MauiBlazorDemonstration.ViewModels;
 using MauiBlazorDemonstration.Views;
 using System.Diagnostics;
 using System.Globalization;
@@ -7,13 +8,13 @@ namespace MauiBlazorDemonstration;
 
 public partial class App : Application
 {
-	public App()
+	public App(BaseViewModel vm)
 	{
 		InitializeComponent();
 
 		SetCulture();
 
-		MainPage = new AppShell();
+		MainPage = new AppShell(vm);
     }
 
 	private static async void SetCulture()

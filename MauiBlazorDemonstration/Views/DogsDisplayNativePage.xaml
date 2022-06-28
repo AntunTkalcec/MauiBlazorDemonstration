@@ -46,51 +46,51 @@
                         <VerticalStackLayout Spacing="10">
                             <HorizontalStackLayout>
                                 <Label Text="{Binding Language[Children]}" Style="{StaticResource LabelStyle}"/>
-                                <Label Text="{Binding ChosenDoggo.good_with_children}" Style="{StaticResource LabelStyle}"/>
+                                <Label Text="{Binding ChosenDoggo.good_with_children, StringFormat='{0}/5'}" Style="{StaticResource LabelStyle}"/>
                             </HorizontalStackLayout>
                             <HorizontalStackLayout>
                                 <Label Text="{Binding Language[OtherDogs]}" Style="{StaticResource LabelStyle}"/>
-                                <Label Text="{Binding ChosenDoggo.good_with_other_dogs}" Style="{StaticResource LabelStyle}"/>
+                                <Label Text="{Binding ChosenDoggo.good_with_other_dogs, StringFormat='{0}/5'}" Style="{StaticResource LabelStyle}"/>
                             </HorizontalStackLayout>
                             <HorizontalStackLayout>
                                 <Label Text="{Binding Language[Shedding]}" Style="{StaticResource LabelStyle}"/>
-                                <Label Text="{Binding ChosenDoggo.shedding}" Style="{StaticResource LabelStyle}"/>
+                                <Label Text="{Binding ChosenDoggo.shedding, StringFormat='{0}/5'}" Style="{StaticResource LabelStyle}"/>
                             </HorizontalStackLayout>
                             <HorizontalStackLayout>
                                 <Label Text="{Binding Language[Grooming]}" Style="{StaticResource LabelStyle}"/>
-                                <Label Text="{Binding ChosenDoggo.grooming}" Style="{StaticResource LabelStyle}"/>
+                                <Label Text="{Binding ChosenDoggo.grooming, StringFormat='{0}/5'}" Style="{StaticResource LabelStyle}"/>
                             </HorizontalStackLayout>
                             <HorizontalStackLayout>
                                 <Label Text="{Binding Language[Drooling]}" Style="{StaticResource LabelStyle}"/>
-                                <Label Text="{Binding ChosenDoggo.drooling}" Style="{StaticResource LabelStyle}"/>
+                                <Label Text="{Binding ChosenDoggo.drooling, StringFormat='{0}/5'}" Style="{StaticResource LabelStyle}"/>
                             </HorizontalStackLayout>
                             <HorizontalStackLayout>
                                 <Label Text="{Binding Language[CoatLength]}" Style="{StaticResource LabelStyle}"/>
-                                <Label Text="{Binding ChosenDoggo.coat_length}" Style="{StaticResource LabelStyle}"/>
+                                <Label Text="{Binding ChosenDoggo.coat_length, StringFormat='{0}/5'}" Style="{StaticResource LabelStyle}"/>
                             </HorizontalStackLayout>
                             <HorizontalStackLayout>
                                 <Label Text="{Binding Language[Strangers]}" Style="{StaticResource LabelStyle}"/>
-                                <Label Text="{Binding ChosenDoggo.good_with_strangers}" Style="{StaticResource LabelStyle}"/>
+                                <Label Text="{Binding ChosenDoggo.good_with_strangers, StringFormat='{0}/5'}" Style="{StaticResource LabelStyle}"/>
                             </HorizontalStackLayout>
                             <HorizontalStackLayout>
                                 <Label Text="{Binding Language[Playfulness]}" Style="{StaticResource LabelStyle}"/>
-                                <Label Text="{Binding ChosenDoggo.playfulness}" Style="{StaticResource LabelStyle}"/>
+                                <Label Text="{Binding ChosenDoggo.playfulness, StringFormat='{0}/5'}" Style="{StaticResource LabelStyle}"/>
                             </HorizontalStackLayout>
                             <HorizontalStackLayout>
                                 <Label Text="{Binding Language[Protectiveness]}" Style="{StaticResource LabelStyle}"/>
-                                <Label Text="{Binding ChosenDoggo.protectiveness}" Style="{StaticResource LabelStyle}"/>
+                                <Label Text="{Binding ChosenDoggo.protectiveness, StringFormat='{0}/5'}" Style="{StaticResource LabelStyle}"/>
                             </HorizontalStackLayout>
                             <HorizontalStackLayout>
                                 <Label Text="{Binding Language[Trainability]}" Style="{StaticResource LabelStyle}"/>
-                                <Label Text="{Binding ChosenDoggo.trainability}" Style="{StaticResource LabelStyle}"/>
+                                <Label Text="{Binding ChosenDoggo.trainability, StringFormat='{0}/5'}" Style="{StaticResource LabelStyle}"/>
                             </HorizontalStackLayout>
                             <HorizontalStackLayout>
                                 <Label Text="{Binding Language[Energy]}" Style="{StaticResource LabelStyle}"/>
-                                <Label Text="{Binding ChosenDoggo.energy}" Style="{StaticResource LabelStyle}"/>
+                                <Label Text="{Binding ChosenDoggo.energy, StringFormat='{0}/5'}" Style="{StaticResource LabelStyle}"/>
                             </HorizontalStackLayout>
                             <HorizontalStackLayout>
                                 <Label Text="{Binding Language[Barking]}" Style="{StaticResource LabelStyle}"/>
-                                <Label Text="{Binding ChosenDoggo.barking}" Style="{StaticResource LabelStyle}"/>
+                                <Label Text="{Binding ChosenDoggo.barking, StringFormat='{0}/5'}" Style="{StaticResource LabelStyle}"/>
                             </HorizontalStackLayout>
                             <HorizontalStackLayout>
                                 <Label Text="{Binding Language[MinLife]}" Style="{StaticResource LabelStyle}"/>
