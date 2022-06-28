@@ -26,7 +26,8 @@
                 </Frame.Shadow>
                 <VerticalStackLayout Spacing="15">
                     <HorizontalStackLayout>
-                        <Frame Margin="0" Padding="0" IsClippedToBounds="True" CornerRadius="80" HeightRequest="130" WidthRequest="130" HorizontalOptions="StartAndExpand" HasShadow="True">
+                        <Frame Margin="0" Padding="0" IsClippedToBounds="True" CornerRadius="80" HeightRequest="130" WidthRequest="130" HorizontalOptions="StartAndExpand" 
+                               HasShadow="True">
                             <Frame.Shadow>
                                 <Shadow Brush="Black" Offset="5, 5" Radius="40" Opacity="0.6"/>
                             </Frame.Shadow>

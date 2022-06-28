@@ -34,20 +34,22 @@ namespace MauiBlazorDemonstration.ViewModels
             {
                 case 0: 
                     await SecureStorage.SetAsync("Language", "en-US");
-                    Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US");
-                    Thread.CurrentThread.CurrentUICulture = new CultureInfo("en-US");
-                    CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("en-US");
-                    CultureInfo.DefaultThreadCurrentUICulture = new CultureInfo("en-US");
-                    LanguageHelper.Instance.SetCultureInfo(new CultureInfo("en-US"));
+                    CultureInfo newCulture = new("en-US");
+                    Thread.CurrentThread.CurrentCulture = newCulture;
+                    Thread.CurrentThread.CurrentUICulture = newCulture;
+                    CultureInfo.DefaultThreadCurrentCulture = newCulture;
+                    CultureInfo.DefaultThreadCurrentUICulture = newCulture;
+                    LanguageHelper.Instance.SetCultureInfo(newCulture);
                     await Shell.Current.DisplayAlert("Done", "Language has been set to English.", "OK");
                     break;
                 case 1:
                     await SecureStorage.SetAsync("Language", "hr-HR");
-                    Thread.CurrentThread.CurrentCulture = new CultureInfo("hr-HR");
-                    Thread.CurrentThread.CurrentUICulture = new CultureInfo("hr-HR");
-                    CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("hr-HR");
-                    CultureInfo.DefaultThreadCurrentUICulture = new CultureInfo("hr-HR");
-                    LanguageHelper.Instance.SetCultureInfo(new CultureInfo("hr-HR"));
+                    CultureInfo newCultureCro = new("hr-HR");
+                    Thread.CurrentThread.CurrentCulture = newCultureCro;
+                    Thread.CurrentThread.CurrentUICulture = newCultureCro;
+                    CultureInfo.DefaultThreadCurrentCulture = newCultureCro;
+                    CultureInfo.DefaultThreadCurrentUICulture = newCultureCro;
+                    LanguageHelper.Instance.SetCultureInfo(newCultureCro);
                     await Shell.Current.DisplayAlert("Gotovo", "Jezik je postavljen na Hrvatski.", "OK");
                     break;
             }

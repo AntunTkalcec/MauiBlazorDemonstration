@@ -10,20 +10,10 @@
 
 
     <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
-        <ShellContent Title="{Binding Language[ShellHome]}" Icon="{AppThemeBinding Light=home.png, Dark=homedark.png}" 
+        <ShellContent Title="{Binding Language[ShellHome]}" Icon="{AppThemeBinding Light=home.png, Dark=setup.png}" 
                       ContentTemplate="{DataTemplate views:HomePage}" Route="HomePage"/>
     </FlyoutItem>
 
-    <ShellContent Title="{Binding Language[ShellSettings]}" Icon="{AppThemeBinding Light=setup.png, Dark=setupdark.png}" 
+    <ShellContent Title="{Binding Language[ShellSettings]}" Icon="{AppThemeBinding Light=setup.png, Dark=setup.png}" 
                   ContentTemplate="{DataTemplate views:SetupPage}" Route="SetupPage"/>
-
-    <!--<Shell.ItemTemplate>
-        <DataTemplate>
-            <Grid ColumnDefinitions="0.2*, 0,8*">
-                <Image Source="{AppThemeBinding Light=home.png, Dark=homedark.png}" Margin="5" HeightRequest="45" BackgroundColor="{AppThemeBinding Light=White, Dark=Black}"/>
-                <Label Grid.Column="1" Text="{Binding Language[ShellHome]}" FontAttributes="Bold" VerticalTextAlignment="Center" 
-                       TextColor="{AppThemeBinding Light={StaticResource PrimaryTextColor}, Dark={StaticResource PrimaryTextColorDark}}"/>
-            </Grid>
-        </DataTemplate>
-    </Shell.ItemTemplate>-->
 </Shell>
